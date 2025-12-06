@@ -1,0 +1,38 @@
+<div class="p-5 mb-4 bg-light rounded-3 text-center">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold text-primary">{{ welcomeMessage }}</h1>
+        <p class="col-md-8 fs-4 mx-auto">
+            We are dedicated to building responsive, modern, and high-performance web applications using the power of Angular.
+        </p>
+        <a [routerLink]="['/services']" class="btn btn-primary btn-lg mt-3 shadow-sm">
+            Discover Our Services
+        </a>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 border-bottom pb-2">Why Choose Us?</h2>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let feature of features">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="bi bi-gear-fill display-6 text-success mb-3"></i> 
+                    
+                    <h5 class="card-title fw-bold">{{ feature.title }}</h5>
+                    <p class="card-text">{{ feature.description }}</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <a [routerLink]="['/services']" class="btn btn-outline-secondary btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 text-center">
+    <hr>
+    <h3>Ready to Start Your Project?</h3>
+    <p>Contact us today for a free consultation.</p>
+    <a [routerLink]="['/contact']" class="btn btn-success btn-lg">Get in Touch</a>
+</div>
